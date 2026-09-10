@@ -20,6 +20,11 @@ python server.py
 Puis `http://localhost:3000` (admin/admin par défaut, à changer).
 Depuis le LAN : `http://<IP-serveur>:3000`.
 
+Au 1er lancement sur une base vide, `init_db()` crée automatiquement
+le compte `admin` + la base TEST (client `TEST` / projet `PR-01` « TEST Projet »
+/ plan `PL-000` « Test Plan », ensemble décoché). Si des clients existent déjà,
+rien n'est ajouté (seed idempotent).
+
 > `server.py` pointe par défaut sur `BASE_DIR = "D:/ServerFolders/NumPlans"`.
 > Adaptez `BASE_DIR`, `FILES_DIR`, `DB_FILE`, `FREECAD_PATH` en haut du fichier
 > ou copiez le dossier de prod vers ce chemin.

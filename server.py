@@ -328,6 +328,22 @@ def init_db():
         c.execute('INSERT INTO users (id, username, password_salt, password_hash, role, createdAt) VALUES (?, ?, ?, ?, ?, ?)',
                   ('admin', 'admin', '', pwd_hash, 'admin', datetime.now().isoformat()))
         print("[INIT] User admin created (password: admin)")
+    # Seed base TEST si aucun client (installation fraiche)
+    c.execute('SELECT COUNT(*) FROM clients')
+    if c.fetchone()[0] == 0:
+        seed_ts = datetime.now().isoformat()
+        seed_client = '-'.join(secrets.token_hex(2) for _ in range(3))
+        seed_project = '-'.join(secrets.token_hex(2) for _ in range(3))
+        seed_plan = '-'.join(secrets.token_hex(2) for _ in range(3))
+        c.execute('INSERT INTO clients (id, number, name, revisionLetters, hidden, createdAt) VALUES (?, ?, ?, ?, ?, ?)',
+                  (seed_client, 'TEST', 'TEST', 0, 0, seed_ts))
+        c.execute('INSERT INTO projects (id, number, name, createdAt, client_id) VALUES (?, ?, ?, ?, ?)',
+                  (seed_project, 'PR-01', 'TEST Projet', seed_ts, seed_client))
+        c.execute('INSERT INTO plans (id, number, name, software, revision, observations, is_ensemble, createdAt, project_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+                  (seed_plan, 'PL-000', 'Test Plan', '', '0', '', 0, seed_ts, seed_project))
+        c.execute("INSERT OR REPLACE INTO counters (name, value) VALUES ('projectsByClient', ?)",
+                  (json.dumps({seed_client: 1}),))
+        print("[INIT] Base TEST initiale creee (TEST / PR-01 / PL-000)")
     conn.commit()
     conn.close()
 
