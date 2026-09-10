@@ -1,0 +1,41 @@
+# --- NumPlans / Gestion-de-Plans ---
+# Base de donnees SQLite (contient hashes, sessions, donnees locales)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+numplans.db
+
+# Sauvegardes automatiques (900+ fichiers generes par backup_db)
+backups/
+
+# Certificats / cles privees - NE JAMAIS COMMITTER
+*.pem
+cert.pem
+key.pem
+
+# Cache GLTF genere par FreeCAD (gros binaires, regenerables)
+GLTF/*.bin
+GLTF/*.gltf
+GLTF/*.log
+# Garder le dossier via .gitkeep
+
+# Fichiers plans (PDF / STEP / DXF) - donnees de production
+Plans/*.pdf
+Plans/*.stp
+Plans/*.step
+Plans/*.dxf
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# OS / editeurs
+.DS_Store
+*.log
+.vscode/
+.idea/
