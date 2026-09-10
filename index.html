@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de la numérotation des plans JUSTET</title>
+    <title>Gestion de la numérotation des plans</title>
     <script src="/threejs/three.min.js"></script>
     <script src="/threejs/OrbitControls.js"></script>
     <script src="/threejs/GLTFLoader.js"></script>
@@ -1232,7 +1232,7 @@
     <header>
         <div class="logo">
             <span class="logo-icon">🔢</span>
-            <span>Gestion de la numérotation des plans JUSTET</span>
+            <span>Gestion de la numérotation des plans</span>
         </div>
         <div class="header-actions">
             <div id="revisionNotifWrapper" style="display:none;position:relative;">
@@ -1898,7 +1898,7 @@ let deleteCallback = null;
             }
             const notifWrapper = document.getElementById('revisionNotifWrapper');
             if (notifWrapper) {
-                const showNotif = isLoggedIn && currentUser?.role === 'client' && currentUser?.client?.number !== 'JUSTET';
+                const showNotif = isLoggedIn && currentUser?.role === 'client' && currentUser?.client?.number !== 'TEST';
                 notifWrapper.style.display = showNotif ? 'block' : 'none';
                 if (showNotif) {
                     loadRevisionChanges();
@@ -1909,7 +1909,7 @@ let deleteCallback = null;
             }
             const fileChangeWrapper = document.getElementById('fileChangeNotifWrapper');
             if (fileChangeWrapper) {
-                const showFileNotif = isLoggedIn && (currentUser?.role === 'local' || (currentUser?.role === 'client' && currentUser?.client?.number === 'JUSTET'));
+                const showFileNotif = isLoggedIn && (currentUser?.role === 'local' || (currentUser?.role === 'client' && currentUser?.client?.number === 'TEST'));
                 fileChangeWrapper.style.display = showFileNotif ? 'block' : 'none';
                 if (showFileNotif) {
                     loadFileChanges();
