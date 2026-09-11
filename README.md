@@ -5,7 +5,7 @@ avec fichiers associés (PDF / STEP / DXF), visionneuse 3D (STEP → GLTF via Fr
 auth multi-rôles, exports ZIP et notifications de révisions.
 
 ## Interface Graphique
-<img width="1418" height="538" alt="image" src="https://github.com/user-attachments/assets/8e71e963-ac7f-4800-8a00-202bd9924121" />
+<img width="1415" height="584" alt="image" src="https://github.com/user-attachments/assets/3cf1fe15-dba0-4770-a77d-7e4fb1cd5050" />
 <img width="1418" height="788" alt="image" src="https://github.com/user-attachments/assets/50dfd36a-d5f2-4f6a-8998-c0be3aa1fff8" />
 
 ## Stack
@@ -78,3 +78,8 @@ chaque STEP en **glTF** (.gltf + .bin), format affichable en WebGL via Three.js.
 Ne committer jamais : `numplans.db`, `*.pem`, `backups/`.
 Auth : Basic + cookie `session` (30 j), CSRF (`csrf_token` + `X-CSRF-Token`),
 bcrypt (migration auto depuis legacy SHA-256), mode lecture seule en local sans login admin.
+
+## Pour voir un rendu réel
+- (https://plans.justet.com/)
+- Login : TEST
+- Pass : 3i7Eg24CYVWTz3G
