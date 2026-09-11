@@ -20,11 +20,8 @@ GLTF/*.gltf
 GLTF/*.log
 # Garder le dossier via .gitkeep
 
-# Fichiers plans (PDF / STEP / DXF) - donnees de production
-Plans/*.pdf
-Plans/*.stp
-Plans/*.step
-Plans/*.dxf
+# Fichiers plans d'exemple (TEST-*) versionnes dans le repo.
+# Ne pas ignorer : ce sont des exemples.
 Thumbs.db
 
 # Python
