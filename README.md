@@ -6,7 +6,7 @@ auth multi-rôles, exports ZIP et notifications de révisions.
 
 ## Interface Graphique
 <img width="1415" height="584" alt="image" src="https://github.com/user-attachments/assets/3cf1fe15-dba0-4770-a77d-7e4fb1cd5050" />
-<img width="1418" height="788" alt="image" src="https://github.com/user-attachments/assets/50dfd36a-d5f2-4f6a-8998-c0be3aa1fff8" />
+<img width="1422" height="806" alt="image" src="https://github.com/user-attachments/assets/15a69fe1-ca51-4af9-88ca-5ae2e802d296" />
 
 ## Stack
 - Backend : `server.py` — Python stdlib `http.server` + `sqlite3` + `bcrypt`, port 3000
