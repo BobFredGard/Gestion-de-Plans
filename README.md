@@ -82,4 +82,4 @@ bcrypt (migration auto depuis legacy SHA-256), mode lecture seule en local sans 
 ## Pour voir un rendu réel
 - https://plans.justet.com/
 - Login : TEST
-- Pass : 3i7Eg24CYVWTz3G
+- Pass : TEST
