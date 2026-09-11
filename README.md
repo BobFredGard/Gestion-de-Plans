@@ -80,6 +80,6 @@ Auth : Basic + cookie `session` (30 j), CSRF (`csrf_token` + `X-CSRF-Token`),
 bcrypt (migration auto depuis legacy SHA-256), mode lecture seule en local sans login admin.
 
 ## Pour voir un rendu réel
-- (https://plans.justet.com/)
+- https://plans.justet.com/
 - Login : TEST
 - Pass : 3i7Eg24CYVWTz3G
