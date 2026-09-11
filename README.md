@@ -4,6 +4,10 @@ Application interne JUSTET : gestion de la numérotation des plans Clients → P
 avec fichiers associés (PDF / STEP / DXF), visionneuse 3D (STEP → GLTF via FreeCAD),
 auth multi-rôles, exports ZIP et notifications de révisions.
 
+## Interface Graphique
+<img width="1418" height="538" alt="image" src="https://github.com/user-attachments/assets/8e71e963-ac7f-4800-8a00-202bd9924121" />
+<img width="1418" height="788" alt="image" src="https://github.com/user-attachments/assets/50dfd36a-d5f2-4f6a-8998-c0be3aa1fff8" />
+
 ## Stack
 - Backend : `server.py` — Python stdlib `http.server` + `sqlite3` + `bcrypt`, port 3000
 - Frontend : `index.html` — un seul fichier (~218 Ko), HTML/CSS/JS vanilla, Three.js local (`threejs/`)
